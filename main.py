@@ -30,7 +30,7 @@ models = load_models()
 if not os.path.isfile(TRACKER_YAML):
     print(f"WARNING: tracker yaml not found at '{TRACKER_YAML}'.")
 
-# ---------------- State ----------------
+# --------------- State ---------------
 empty_detector = EmptyLaneDetector(EMPTY_THRESHOLD_SEC)
 last_annotated = [np.zeros((CELL_H, CELL_W, 3), dtype=np.uint8) for _ in range(NUM_ROADS)]
 seen_ids_left = [set() for _ in range(NUM_ROADS)]
